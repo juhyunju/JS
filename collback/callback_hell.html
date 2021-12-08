@@ -1,0 +1,73 @@
+<html>
+<body>
+  콜백함수 - 콜백지옥
+</body>
+</html>
+<script>
+  //setTimeout(콜백함수,시간(ms),콜백함수 인자1,인자2,...)
+  // const func = (name) =>{
+  //   console.log(name)
+  // }
+
+  // setTimeout(func,1000,'이주현')
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ//
+  // setTimeout(
+  //   (name)=>{
+  //     let ramenList = name
+  //     console.log(ramenList)
+
+  //   },500,'꼬꼬면')
+
+    // const func2 = (name) => {
+    //   let ramenList = name
+    //   console.log(name)
+    // }
+    // setTimeout(func2,500,'꼬꼬면')
+
+    let ramenList = ''
+    
+    const addSamyang = (name) =>{
+      ramenList = name // ramenList = '삼양라면'
+      console.log(ramenList)
+      setTimeout(addShin,500,'신라면')
+    }
+
+    const addShin = (name) => {
+      ramenList += ',' + name
+      console.log(ramenList)
+      setTimeout(addJin,500,'진라면')
+    }
+
+    const addJin = (name) => {
+      ramenList += ',' + name
+      console.log(ramenList)
+      setTimeout(addNuguri,500,'너구리')
+    }
+
+    const addNuguri = (name) =>{
+      ramenList += ',' + name
+      console.log(ramenList)
+    }
+    
+    // addSamyang('삼양라면')
+
+    setTimeout(addSamyang,500,'삼양라면')
+
+    
+//     const addSamyang = (name) =>{
+
+// ramenList = name // ramenList = '삼양라면'
+// console.log(ramenList)
+// setTimeout(
+//   (name1)=>{
+//   // ramenList = ramenList + ',' + name1 //'삼양라면' + ',' + '신라면'
+//   ramenList += ',' + name1 // 위에 문법이랑 똑같은 결과
+//   console.log(ramenList) // 삼양라면, 신라면
+
+// },500,'신라면')
+// }
+// addSamyang('삼양라면')
+
+
+
+</script>
