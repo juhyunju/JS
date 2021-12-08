@@ -1,0 +1,19 @@
+<html>
+<body>
+  
+</body>
+</html>
+<script>
+  function buyCoffe(coffeeName,price,quantity){ //커피를 사는 행위
+    console.log(`${coffeeName}를 ${quantity}개 구입하려고합니다.`)
+    console.log(`${coffeeName} 한 개 ${price}원 입니다.`)
+    return price * quantity
+  }
+
+  // buyCoffe('아메리카노',5000,3)
+
+  function pay(money){ // 커피값 계산결과 출력 함수
+    console.log(money,"원을 지불하였슴다")
+  }
+  pay(buyCoffe('아메리카노',5000,3))
+</script>
