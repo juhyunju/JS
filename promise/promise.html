@@ -1,0 +1,37 @@
+<html>
+<body>
+  
+</body>
+</html>
+<script>
+
+  let ramenList = '삼양라면'
+  new Promise((resolve)=>{
+    resolve(ramenList)
+  })
+  .then((result)=>{
+    console.log(result) // 삼양라면
+    ramenList +=',' + '진라면'
+    return new Promise((resolve) => {
+      resolve(ramenList)
+    })
+  })
+  .then((result)=>{
+    console.log(result)
+    ramenList += ',' + '신라면'
+    return new Promise((resolve) =>{
+      resolve(ramenList)
+    })
+  })
+  .then((result)=>{
+    console.log(result)
+    ramenList += ',' + '너구리'
+    return new Promise((resolve) => {
+      resolve(ramenList)
+    })
+  })
+  .then((result)=>{
+    console.log(result)
+  })
+
+</script>
