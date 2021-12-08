@@ -1,0 +1,14 @@
+<html>
+  <body>
+    이벤트 루프
+  </body>
+</html>
+<script>
+  const foo = () => console.log("first")
+  const bar = () => setTimeout(() => console.log("Second"),10000)
+  const baz = () => console.log("Third")
+
+  baz()
+  bar()
+  foo()
+</script>
